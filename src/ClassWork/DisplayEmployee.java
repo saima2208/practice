@@ -24,7 +24,7 @@ public class DisplayEmployee {
         //System.out.println(rahul.getName() +"\t " + rahul.getYear()+ "\t\t\t "+ rahul.getAddress());
         //System.out.println(roman.getName() + "\t " + roman.getYear()+"\t\t " +roman.getAddress() );
        // System.out.println(rohit.getName()+"\t "+ roman.getYear() +"\t\t " + rohit.getAddress());
-        System.out.println(Employee1.toString());
+       // System.out.println(Employee1);
 
     }
 }
