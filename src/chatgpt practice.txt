@@ -1,0 +1,570 @@
+Here’s a list of Java loop-related practice questions along with examples. These cover various types of loops in Java (for, while, and do-while) and practical scenarios.
+
+ 1. Print Numbers
+Question: Write a program to print numbers from 1 to 10 using a for loop.
+Example:
+
+java
+Copy code
+public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+ 2. Sum of Numbers
+Question: Find the sum of the first 100 natural numbers using a while loop.
+Example:
+
+java
+Copy code
+public class SumOfNumbers {
+    public static void main(String[] args) {
+        int i = 1, sum = 0;
+        while (i <= 100) {
+            sum += i;
+            i++;
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+3. Multiplication Table
+Question: Write a program to print the multiplication table of a given number using a for loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+4. Reverse a Number
+Question: Write a program to reverse a number using a while loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num /= 10;
+        }
+        System.out.println("Reversed Number: " + reverse);
+    }
+}
+5. Factorial of a Number
+Question: Find the factorial of a given number using a do-while loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int factorial = 1;
+        int i = 1;
+        do {
+            factorial *= i;
+            i++;
+        } while (i <= num);
+
+        System.out.println("Factorial: " + factorial);
+    }
+}
+6. Check Prime Number
+Question: Write a program to check if a number is prime using a for loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        boolean isPrime = true;
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+}
+7. Fibonacci Sequence
+Question: Print the Fibonacci sequence up to n terms using a for loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of terms: ");
+        int n = sc.nextInt();
+
+        int first = 0, second = 1;
+        System.out.println("Fibonacci Sequence:");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(first + " ");
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}
+8. Nested Loops: Pattern Printing
+Question: Print the following pattern using nested loops:
+
+markdown
+Copy code
+*
+**
+***
+****
+*****
+Example:
+
+java
+Copy code
+public class Pattern {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+9. Count Digits
+Question: Count the number of digits in a given number using a while loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class CountDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+
+        System.out.println("Number of digits: " + count);
+    }
+}
+10. Palindrome Check
+Question: Check if a given number is a palindrome using a while loop.
+Example:
+
+java
+Copy code
+import java.util.Scanner;
+
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num /= 10;
+        }
+
+        if (original == reverse) {
+            System.out.println(original + " is a palindrome.");
+        } else {
+            System.out.println(original + " is not a palindrome.");
+        }
+    }
+}
+Feel free to practice these and let me know if you need further explanations or modifications!
+
+
+
+
+
+
+You said:
+java object and method releted practice question
+ChatGPT said:
+ChatGPT
+Here’s a list of Java object-and-method-related practice questions with examples. These questions help you understand the basics of working with objects, classes, constructors, and methods in Java.
+
+1. Create and Use Objects
+Question: Create a Car class with attributes brand and speed. Create an object of the Car class and display its attributes.
+Example:
+
+java
+Copy code
+class Car {
+    String brand;
+    int speed;
+
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Speed: " + speed);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.brand = "Toyota";
+        myCar.speed = 120;
+
+        myCar.displayInfo();
+    }
+}
+2. Parameterized Constructor
+Question: Create a Student class with a constructor that initializes name and age. Create objects and display the values.
+Example:
+
+java
+Copy code
+class Student {
+    String name;
+    int age;
+
+    // Constructor
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student1 = new Student("Alice", 20);
+        Student student2 = new Student("Bob", 22);
+
+        student1.display();
+        student2.display();
+    }
+}
+3. Method Overloading
+Question: Create a Calculator class with methods to add two, three, or four numbers (method overloading).
+Example:
+
+java
+Copy code
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    int add(int a, int b, int c, int d) {
+        return a + b + c + d;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        System.out.println("Sum of 2 numbers: " + calc.add(5, 10));
+        System.out.println("Sum of 3 numbers: " + calc.add(5, 10, 15));
+        System.out.println("Sum of 4 numbers: " + calc.add(5, 10, 15, 20));
+    }
+}
+4. Method Overriding
+Question: Create a Shape class with a method area() and override it in subclasses Circle and Rectangle.
+Example:
+
+java
+Copy code
+class Shape {
+    double area() {
+        return 0;
+    }
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    double area() {
+        return length * width;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle(5);
+        Shape rectangle = new Rectangle(4, 6);
+
+        System.out.println("Circle Area: " + circle.area());
+        System.out.println("Rectangle Area: " + rectangle.area());
+    }
+}
+5. Static Methods
+Question: Create a MathUtil class with a static method square(int n) that returns the square of a number.
+Example:
+
+java
+Copy code
+class MathUtil {
+    static int square(int n) {
+        return n * n;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Square of 5: " + MathUtil.square(5));
+        System.out.println("Square of 10: " + MathUtil.square(10));
+    }
+}
+6. Getters and Setters
+Question: Create an Employee class with name and salary attributes. Use getters and setters to access and modify the attributes.
+Example:
+
+java
+Copy code
+class Employee {
+    private String name;
+    private double salary;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.setName("John");
+        emp.setSalary(50000);
+
+        System.out.println("Employee Name: " + emp.getName());
+        System.out.println("Employee Salary: " + emp.getSalary());
+    }
+}
+7. Pass Objects to Methods
+Question: Create a Rectangle class with length and width attributes. Write a method to calculate the area and pass the object to a method in another class.
+Example:
+
+java
+Copy code
+class Rectangle {
+    double length, width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+}
+
+class AreaCalculator {
+    void calculateArea(Rectangle rect) {
+        double area = rect.length * rect.width;
+        System.out.println("Area: " + area);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle rect = new Rectangle(5, 10);
+        AreaCalculator calc = new AreaCalculator();
+        calc.calculateArea(rect);
+    }
+}
+8. Return Objects from Methods
+Question: Create a method that returns a Book object after setting its attributes.
+Example:
+
+java
+Copy code
+class Book {
+    String title;
+    String author;
+
+    Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    void display() {
+        System.out.println("Title: " + title + ", Author: " + author);
+    }
+}
+
+class Library {
+    Book createBook(String title, String author) {
+        return new Book(title, author);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library lib = new Library();
+        Book book = lib.createBook("Java Programming", "James Gosling");
+        book.display();
+    }
+}
+9. Method Chaining
+Question: Implement method chaining in a Person class.
+Example:
+
+java
+Copy code
+class Person {
+    private String name;
+    private int age;
+
+    public Person setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Person setAge(int age) {
+        this.age = age;
+        return this;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.setName("Alice").setAge(25).display();
+    }
+}
+10. Practice on Object Comparison
+Question: Create a Product class and write a method to compare two Product objects by their price.
+Example:
+
+java
+Copy code
+class Product {
+    String name;
+    double price;
+
+    Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    boolean isCheaperThan(Product other) {
+        return this.price < other.price;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Product p1 = new Product("Laptop", 800);
+        Product p2 = new Product("Tablet", 500);
+
+        if (p1.isCheaperThan(p2)) {
+            System.out.println(p1.name + " is cheaper than " + p2.name);
+        } else {
+            System.out.println(p1.name + " is not cheaper than " + p2.name);
+        }
+    }
+}
+Let me know if you'd like additional examples or clarifications!
+
+
+
+
+
+
+
+
+
+
+
+
