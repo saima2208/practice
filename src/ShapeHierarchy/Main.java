@@ -9,6 +9,9 @@ public class Main {
             circle.calculateArea();
             rectangle.calculateArea();
             square.calculateArea();
+           // System.out.println(" The area of circle is " + circle.calculateArea(5));
+           // System.out.println(" The area of Rectangle is " + rectangle.calculateArea(););
+            System.out.println(" The area of Square is " +square);
         } catch (Exception e) {
             throw new NegativeNumberNotSupported();
         }
