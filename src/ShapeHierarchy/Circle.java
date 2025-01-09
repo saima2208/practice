@@ -1,18 +1,23 @@
 package ShapeHierarchy;
 
-import java.util.Scanner;
-
 import static java.lang.Math.PI;
 
-public class Circle{
-    Scanner input = new Scanner(System.in);
-    private double radius = input.nextDouble();
-     void calculateArea(){
+ class Circle extends Shape{
 
-     }
+    double radius;
+
+    public Circle(double radius) throws NegativeNumberNotSupported {
+        if (radius < 0){
+            throw new NegativeNumberNotSupported("Negative number not supported");
+        }
+        this.radius = radius;
+
+    }
 
 
+    @Override
+    public double calculateArea() {
+        return PI * radius * radius;
 
-
-
+    }
 }

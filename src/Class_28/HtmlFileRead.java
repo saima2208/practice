@@ -26,7 +26,7 @@ public class HtmlFileRead {
                 // Print the extracted text
                 System.out.println(sb.toString());
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }
@@ -34,4 +34,4 @@ public class HtmlFileRead {
 
 
 
-}
+
