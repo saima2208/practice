@@ -1,9 +1,29 @@
 package ShapeHierarchy;
 
 public class Rectangle extends Shape {
-   protected double width ;
-   protected double height;
+    protected double width;
+    protected double height;
 
+    public Rectangle(double width, double height) throws NegativeNumberNotSupported {
+        if (width < 0 || height < 0) {
+            throw new NegativeNumberNotSupported("Negative number not Supported");
+        }
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double calculateArea() {
+        return width * height;
+    }
+
+
+}
+
+
+
+
+/*
     public double getWidth() {
         return width;
     }
@@ -26,9 +46,9 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void calculateArea() {
+    public double calculateArea() {
         double recArea = width * height;
     }
 
 
-}
+}*/
