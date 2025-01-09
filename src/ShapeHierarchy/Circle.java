@@ -1,17 +1,18 @@
 package ShapeHierarchy;
 
+import java.util.Scanner;
+
 import static java.lang.Math.PI;
 
-public class Circle extends Shape{
+public class Circle{
+    Scanner input = new Scanner(System.in);
+    private double radius = input.nextDouble();
+     void calculateArea(){
 
-    private int radius;
+     }
 
-    public Circle(int radius) {
-        this.radius = radius;
-    }
 
-    @Override
-    public double calculateArea() {
-        return PI * radius * radius;
-    }
+
+
+
 }
