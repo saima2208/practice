@@ -12,20 +12,6 @@ public class BankMain {
         SavingsAccount savingsAccount = new SavingsAccount();
         CheckingAccount checkingAccount = new CheckingAccount();
 
-       // bankAccount1.setAccountNo(1001);
-        //bankAccount1.setBalance(1000.00);
-        //bankAccount1.setInterest(0.02);
-       // bankAccount1.setType("Savings");
-/*
-        bankAccount2.setAccountNo(1002);
-        bankAccount2.setBalance(2000.00);
-        bankAccount2.setInterest(5.0);
-        bankAccount2.setType("Current");
-
-        bankAccount3.setAccountNo(1003);
-        bankAccount3.setBalance(5000.00);
-        bankAccount3.setInterest(0.015);
-        bankAccount3.setType("Savings");*/
 
 
         try {

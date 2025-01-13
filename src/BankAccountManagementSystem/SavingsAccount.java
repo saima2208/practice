@@ -21,6 +21,7 @@ public class SavingsAccount extends BankAccount {
             throw new InvalidAmountException("Amount must be greater than 0");
         }
         super.deposit(amount);
+        setBalance((getBalance() - amount));
     }
 
     @Override
@@ -29,6 +30,7 @@ public class SavingsAccount extends BankAccount {
             throw new InsufficientFundsException("Insufficient Balance");
         }
         super.withdrawal(amount);
+        setBalance((getBalance() - amount));
     }
 
     @Override
