@@ -1,12 +1,13 @@
 package BankAccountManagementSystem;
 
 
-class SavingsAccount extends BankAccount {
-    private double interestRate;
 
-    public SavingsAccount(int accountNumber, double balance, double interestRate) {
+class CurrentAccount extends BankAccount {
+    private double overdraftLimit;
+
+    public CurrentAccount(int accountNumber, double balance, double overdraftLimit) {
         super(accountNumber, balance);
-        this.interestRate = interestRate;
+        this.overdraftLimit = overdraftLimit;
     }
 
     @Override
@@ -22,14 +23,14 @@ class SavingsAccount extends BankAccount {
         if (amount <= 0) {
             throw new InvalidAmountException("Invalid withdrawal amount.");
         }
-        if (getBalance() - amount < 0) {
-            throw new InsufficientFundsException("Insufficient funds.");
+        if (getBalance() - amount < -overdraftLimit) {
+            throw new InsufficientFundsException("Withdrawal exceeds overdraft limit.");
         }
         setBalance(getBalance() - amount);
     }
 
     @Override
     public double calculateInterest() {
-        return getBalance() * interestRate;
+        return 0.0; // No interest on checking accounts
     }
 }
