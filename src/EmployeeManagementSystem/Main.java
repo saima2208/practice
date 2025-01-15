@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+
+
         List<Employee> employees = new ArrayList<>();
         try {
-            File file = new File("C:\\Users\\Java Student PC-7\\Desktop\\JAVA\\practice\\Employee.csv");
+            File file = new File("C:\\Users\\Java Student PC-7\\Desktop\\JAVA\\Git\\practice\\Employee.csv");
             Scanner reader = new Scanner(file);
             while (reader.hasNext()){
                 String[] data = reader.nextLine().split(",");
@@ -43,6 +45,7 @@ public class Main {
         } catch (IOException e) {
             System.out.println("An error occurred");
         }
+
 
     }
 }

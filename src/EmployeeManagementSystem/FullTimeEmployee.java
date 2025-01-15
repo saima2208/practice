@@ -15,12 +15,13 @@ public class FullTimeEmployee extends Employee {
             throw new InvalidSalaryException("Invalid salary");
         }
     }
+
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + getName() +
-                ", ID=" + getID() +
-                ", Salary=" + getSalary() +
-                '}';
+        return
+                getName() +" "+  getID() +  " " + getSalary();
     }
-}
+
+
+    }
+

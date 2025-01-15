@@ -18,10 +18,9 @@ public class ContractEmployee extends Employee{
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + getName() +
-                ", ID=" + getID() +
-                ", Salary=" + getSalary() +
-                '}';
+        return
+        getName() + " " + getID() + " " + getSalary();
     }
+
+
 }

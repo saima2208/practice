@@ -9,12 +9,14 @@ public class PartTimeEmployee extends Employee {
     public void CalculatingTaxes() {
         System.out.println("Do not pay tax");
     }
+
     @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + getName() +
-                ", ID=" + getID() +
-                ", Salary=" + getSalary() +
-                '}';
-    }
+
+        public String toString() {
+            return
+                    getName() + " " + getID() + " " + getSalary();
+        }
+
+
+
 }

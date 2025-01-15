@@ -38,6 +38,11 @@ abstract class Employee implements TaxCalculator {
     public void setSalary(double salary) {
         Salary = salary;
     }
+    @Override
+    public String toString() {
+        return "Name \t\t"+ "ID\t\t " + "Salary" ;
+
+    }
 
 
 }
