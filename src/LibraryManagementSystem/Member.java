@@ -15,6 +15,10 @@ public class Member {
         this.memberShipType = memberShipType;
     }
 
+    public Member(ArrayList<String> borrowedBook) {
+        this.borrowedBook = borrowedBook;
+    }
+
     void borrowBook(){
 
     }
