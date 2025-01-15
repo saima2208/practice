@@ -18,7 +18,7 @@ class CurrentAccount extends BankAccount {
         setBalance(getBalance() + amount);
     }
 
-    @Override
+  //  @Override
     public void withdraw(double amount) throws InsufficientFundsException, InvalidAmountException {
         if (amount <= 0) {
             throw new InvalidAmountException("Invalid withdrawal amount.");
@@ -29,7 +29,7 @@ class CurrentAccount extends BankAccount {
         setBalance(getBalance() - amount);
     }
 
-    @Override
+   // @Override
     public double calculateInterest() {
         return 0.0; // No interest on checking accounts
     }
