@@ -1,23 +1,23 @@
 package LibraryManagementSystem;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Member {
+        private int member_Id;
         private String name;
+        private String address;
+        private LocalDate  joinDate;
+        private  LocalDate expiryDate;
         private String memberShipType;
-       ArrayList<String> borrowedBook = new ArrayList<>();
+       private String borrowedBook;
 
     public Member() {
     }
 
-    public Member(String name, String memberShipType) {
-        this.name = name;
-        this.memberShipType = memberShipType;
-    }
 
-    public Member(ArrayList<String> borrowedBook) {
-        this.borrowedBook = borrowedBook;
-    }
+
+
 
     void borrowBook(){
 
@@ -27,19 +27,5 @@ public class Member {
 
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMemberShipType() {
-        return memberShipType;
-    }
-
-    public void setMemberShipType(String memberShipType) {
-        this.memberShipType = memberShipType;
-    }
 }

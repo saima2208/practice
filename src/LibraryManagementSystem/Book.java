@@ -1,18 +1,20 @@
 package LibraryManagementSystem;
 
 public class Book {
+    private int bookId;
     private String title;
     private String author;
+    private String publisher;
+    private String category;
     private boolean availabilityStatus;
 
+    //constructor
     public Book() {
     }
 
-    public Book(String title, String author, boolean availabilityStatus) {
-        this.title = title;
-        this.author = author;
-        this.availabilityStatus = availabilityStatus;
-    }
+
+
+    //Methods
 
     void addBook(){
 
@@ -25,6 +27,28 @@ public class Book {
     void searchBook(){
 
     }
+
+
+    //Setter - Getter
+
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+
 
     public String getTitle() {
         return title;
