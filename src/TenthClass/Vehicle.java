@@ -1,9 +1,8 @@
 package TenthClass;
 
-import TenthClass.interfaceTest.FauInterface;
 import TenthClass.interfaceTest.VehicleInterface;
 
-public abstract class Vehicle implements VehicleInterface, FauInterface {
+public abstract class Vehicle implements VehicleInterface {
 
     private String engineBrand;
     private int seatNumber;

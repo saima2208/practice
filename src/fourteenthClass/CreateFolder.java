@@ -1,9 +1,10 @@
-package Class_14;
+package fourteenthClass;
 
 //Import file class
+
 import java.io.File;
-//Import Scanner class
 import java.util.Scanner;
+
 public class CreateFolder {
     //Main() method start
     public static void main(String args[]) {
